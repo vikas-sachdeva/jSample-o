@@ -13,13 +13,7 @@ import jsample.model.Employee;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Employees {
 
-	private List<Employee> employeeList = new ArrayList<Employee>() {
-		private static final long serialVersionUID = 1L;
-		{
-			add(new Employee(101, "Bob"));
-			add(new Employee(102, "Alice"));
-		}
-	};
+	private List<Employee> employeeList = new ArrayList<Employee>();
 
 	public List<Employee> getEmployeeList() {
 		return employeeList;
