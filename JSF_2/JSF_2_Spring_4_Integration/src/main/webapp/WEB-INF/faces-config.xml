@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
-	http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
-	version="2.1">
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+	http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
 	<!-- The el-resolver mentioning SpringBeanFacesELResolver connects the JSF 
 		front end values to the Spring backend service layer. It will make Spring’s 
 		bean in Spring IOC context, and JSF’s managed bean in JSF IOC context. -->
@@ -12,3 +12,11 @@
 	</application>
 
 </faces-config>
+
+<!-- For JSF 2.1 <faces-config> tags should be 
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+	version="2.1">
+</faces-config> 
+-->
