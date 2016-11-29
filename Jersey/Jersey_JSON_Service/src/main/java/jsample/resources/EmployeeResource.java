@@ -15,8 +15,6 @@ import javax.ws.rs.core.Response.Status;
 import jsample.model.Employee;
 import jsample.service.EmployeeService;
 
-
-
 @Path("/employee")
 public class EmployeeResource {
 
@@ -38,7 +36,7 @@ public class EmployeeResource {
 		for (int i = 0; i < EmployeeService.getInstance().getEmployeeList().size(); i++) {
 			if (EmployeeService.getInstance().getEmployeeList().get(i).getId().equals(id)) {
 				EmployeeService.getInstance().getEmployeeList().remove(i);
-				return Response.status(202).entity("Employee with id " + id + " is deleted.").build();
+				return Response.status(Status.ACCEPTED).entity("Employee with id " + id + " is deleted.").build();
 			}
 		}
 		return Response.status(Status.NOT_FOUND).entity("Employee with id " + id + " is not found").build();
