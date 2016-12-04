@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- Specify id and class of the bean. This id is used for getting class 
+		instance in code. -->
+	<bean id="helloBean" class="jsample.beans.HelloWorld">
+		<!-- set name variable value of the bean class -->
+		<property name="name" value="Spring XML" />
+	</bean>
+</beans>
