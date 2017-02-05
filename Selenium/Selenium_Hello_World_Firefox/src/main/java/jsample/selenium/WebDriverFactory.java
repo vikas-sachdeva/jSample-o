@@ -15,9 +15,9 @@ public class WebDriverFactory {
 		webDriver.manage().window().maximize();
 
 		// Wait for finding elements
-		webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		webDriver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT_SEC, TimeUnit.SECONDS);
 
-		webDriver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		webDriver.manage().timeouts().pageLoadTimeout(Constants.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		return webDriver;
 	}
 }
