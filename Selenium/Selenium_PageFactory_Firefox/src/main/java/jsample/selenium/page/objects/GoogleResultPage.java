@@ -1,5 +1,6 @@
 package jsample.selenium.page.objects;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Keys;
@@ -25,10 +26,10 @@ public class GoogleResultPage {
 	private WebDriver driver;
 
 	@FindBy(id = ID_DIV_RESULT_COUNT)
-	private WebElement divResultCount;
+	private List<WebElement> divResultCount;
 
 	@FindBy(partialLinkText = LINK_TEXT_WIKIPEDIA)
-	private WebElement linkTextWikipedia;
+	private List<WebElement> linkTextWikipedia;
 
 	public GoogleResultPage(WebDriver driver) {
 		this.driver = driver;
@@ -36,23 +37,21 @@ public class GoogleResultPage {
 	}
 
 	public boolean isResultFound() {
-		// return !driver.findElements(divResultCount).isEmpty();
-		return !(divResultCount == null);
+		return !divResultCount.isEmpty();
 	}
 
 	public String getResultFound() {
-		return divResultCount.getText();
+		return divResultCount.get(0).getText();
 	}
 
 	public boolean isWikipediaLinkExist() {
-		// return !driver.findElements(LINK_TEXT_WIKIPEDIA_LOCATOR).isEmpty();
-		return !(linkTextWikipedia == null);
+		return !linkTextWikipedia.isEmpty();
 	}
 
 	public WikipediaPage openWikipediaLinkInNewTab() {
 
 		String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL, Keys.RETURN);
-		linkTextWikipedia.sendKeys(selectLinkOpeninNewTab);
+		linkTextWikipedia.get(0).sendKeys(selectLinkOpeninNewTab);
 
 		// Wait for the new tab to open
 		wait.until(ExpectedConditions.numberOfWindowsToBe(2));
