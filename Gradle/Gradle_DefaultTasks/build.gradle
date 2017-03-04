@@ -1,0 +1,16 @@
+// Declare defaultTasks here which will be executed if no task is specified i.e. while executing "gradle" command
+defaultTasks 'myDefault'
+
+// helloWorld Task
+task helloWorld {
+	doLast {
+		println 'Hello Wrold !!! Gradle'
+	}
+}
+
+// myDefault Task
+task myDefault {
+	doLast {
+		println 'It is from default task'
+	}
+}
