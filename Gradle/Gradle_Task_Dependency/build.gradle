@@ -1,0 +1,19 @@
+// Declare defaultTasks here which will be executed if no task is specified i.e. while executing "gradle" command
+defaultTasks 'myDefault'
+
+/*  It is gradle helloWorld Task. 
+	Execute this task using "gradle helloWorld" command. 
+	This task can also be executed using "gradle hW" command.
+*/
+task helloWorld {
+	doLast {
+		println 'Hello World !!! Gradle'
+	}
+}
+
+// myDefault Task. This task depends on helloWorld Task
+task myDefault (dependsOn : helloWorld) {
+	doLast {
+		println 'It is from default task'
+	}
+}
