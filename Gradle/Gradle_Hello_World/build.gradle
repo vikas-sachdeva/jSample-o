@@ -1,4 +1,4 @@
-/** It is gradle helloWorld Task. 
+/*  It is gradle helloWorld Task. 
 	Execute this task using "gradle helloWorld" command. 
 	This task can also be executed using "gradle hW" command.
 */
