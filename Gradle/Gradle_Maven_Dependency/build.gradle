@@ -19,4 +19,5 @@ dependencies {
 }
 
 // Define the main class for the application
-mainClassName = 'App'
+// mainClassName is required so that main method can be executed using 'gradle run' command 
+mainClassName = 'jsample.gradle.App'
