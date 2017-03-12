@@ -1,0 +1,22 @@
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+
+// Apply the application plugin to add support for building an application
+apply plugin: 'application'
+
+// In this section declare where to find the dependencies of the project
+repositories {
+    // Use mavenCentral() for resolving dependencies using maven
+    mavenCentral()
+}
+
+dependencies {
+	// Maven dependency should be written like - 'groupId:artifactId:version'
+	  
+    compile 'com.google.guava:guava:21.0'
+
+    testCompile 'junit:junit:4.12'
+}
+
+// Define the main class for the application
+mainClassName = 'App'
