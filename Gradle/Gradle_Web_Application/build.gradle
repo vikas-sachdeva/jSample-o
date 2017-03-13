@@ -4,7 +4,11 @@ apply plugin: 'java'
 // Apply the war plugin to add support for building a WAR file
 apply plugin: 'war'
 
-// Eclipse plugin is required for running web application in eclipse project
+// Eclipse plugin is required for running web application in eclipse project.
+/* 
+   The eclipse-wtp is automatically applied whenever
+   the eclipse plugin is applied to a War or Ear project.
+*/ 
 apply plugin: 'eclipse'
 
 // In this section declare where to find the dependencies of the project
