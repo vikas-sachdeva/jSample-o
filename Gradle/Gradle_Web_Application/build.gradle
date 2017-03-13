@@ -1,0 +1,20 @@
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+
+// Apply the war plugin to add support for building a WAR file
+apply plugin: 'war'
+
+// Eclipse plugin is required for running web application in eclipse project
+apply plugin: 'eclipse'
+
+// In this section declare where to find the dependencies of the project
+repositories {
+    // Use mavenCentral() for resolving dependencies using maven
+    mavenCentral()
+}
+
+dependencies {
+
+	providedCompile 'javax:javaee-web-api:7.0'
+
+}
