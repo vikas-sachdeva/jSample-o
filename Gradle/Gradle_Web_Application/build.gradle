@@ -18,7 +18,10 @@ repositories {
 }
 
 dependencies {
-
+	// Maven dependency should be written like - 'groupId:artifactId:version'
+	
+	compile 'com.google.guava:guava:21.0'
+	
 	providedCompile 'javax:javaee-web-api:7.0'
 
 }
