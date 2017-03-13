@@ -8,6 +8,8 @@ apply plugin: 'application'
   The Eclipse plugin generate files that are used by the Eclipse IDE, 
   thus making it possible to import the project into Eclipse 
   (File - Import... - Existing Projects into Workspace).
+  In actual, there are 2 plugins - 'eclipse' and 'eclipse-wtp'
+  Internally, the 'eclipse-wtp' plugin also applies the 'eclipse' plugin 
 */
 apply plugin: 'eclipse-wtp'
 
