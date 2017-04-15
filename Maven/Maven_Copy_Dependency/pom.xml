@@ -26,10 +26,10 @@
 	<build>
 		<plugins>
 			<!-- This plugin is responsible for copying all dependencies including 
-				transitive dependency in a separate folder. -->
-			<!-- Dependencies can also be copied in "dependency" directory under target 
-				directory without this plugin. It can be done by executing 'dependency:copy-dependencies' 
-				goal -->
+				transitive dependencies in a separate folder. -->
+			<!-- Dependencies including transitive dependencies can also be copied in 
+				"dependency" directory under target directory without this plugin. It can 
+				be done by executing 'dependency:copy-dependencies' goal -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
