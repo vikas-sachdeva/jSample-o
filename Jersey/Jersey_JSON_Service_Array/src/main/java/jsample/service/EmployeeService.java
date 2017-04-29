@@ -4,21 +4,25 @@ import jsample.model.Employees;
 
 public class EmployeeService {
 
-	private static final EmployeeService instance = new EmployeeService();
-
 	private Employees employees;
 
-	private EmployeeService() {
-
-		employees = new Employees();
+	private static class ClassLazyHolder {
+		private static final EmployeeService INSTANCE = new EmployeeService();
 	}
 
 	public static EmployeeService getInstance() {
-		return instance;
+		return ClassLazyHolder.INSTANCE;
+	}
+
+	private EmployeeService() {
+		employees = new Employees();
 	}
 
 	public Employees getEmployees() {
 		return employees;
 	}
 
+	public void setEmployees(Employees employees) {
+		this.employees = employees;
+	}
 }
