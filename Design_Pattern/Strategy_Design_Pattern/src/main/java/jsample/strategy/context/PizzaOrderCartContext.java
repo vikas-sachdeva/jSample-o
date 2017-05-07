@@ -1,4 +1,4 @@
-package jsample.strategy.impl;
+package jsample.strategy.context;
 
 import java.util.ArrayList;
 import java.util.List;

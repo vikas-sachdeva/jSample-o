@@ -1,8 +1,9 @@
 package jsample;
 
+
+import jsample.strategy.context.PizzaOrderCartContext;
 import jsample.strategy.impl.DropStrategy;
 import jsample.strategy.impl.PickupStrategy;
-import jsample.strategy.impl.PizzaOrderCartContext;
 import jsample.strategy.model.Pizza;
 
 public class App {
