@@ -5,8 +5,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Name of the log configuration file must be log4j2.xml or log4j2.properties
- * and It should be present in the classpath of the program.
+ * 
+ * While using log4j2 external configuration file, below message will get
+ * printed on console -
+ * 
+ * ERROR StatusLogger No log4j2 configuration file found. Using default
+ * configuration: logging only errors to the console.
+ * 
+ * This message will get printed initially because no log4j2 configuration file
+ * is present in classpath of the application.
+ * 
  */
 public class App {
 

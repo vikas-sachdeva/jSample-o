@@ -8,13 +8,12 @@
 	<packaging>jar</packaging>
 
 	<name>Slf4j_log4j2_RollingFile_Appender</name>
-	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<version.log4j>2.7</version.log4j>
+		<version.log4j>2.8.2</version.log4j>
 	</properties>
 
 	<dependencies>
