@@ -17,6 +17,10 @@ import org.apache.logging.log4j.core.config.builder.impl.BuiltConfiguration;
 
 public class Log4j2ConfigurationFactory extends ConfigurationFactory {
 
+	/**
+	 * Supported type of "*" means it will override any configuration file
+	 * provided.
+	 */
 	@Override
 	protected String[] getSupportedTypes() {
 		return new String[] { "*" };
