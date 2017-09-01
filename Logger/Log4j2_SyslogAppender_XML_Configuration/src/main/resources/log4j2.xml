@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configuration>
+
+<Configuration status="warn" name="xml_configuration">
+
+	<Appenders>
+
+		<Syslog name="sysLogger" host="192.168.56.102" port="514"
+			protocol="UDP" facility="local3" newline="true" immediateFlush="true">
+			<!-- It is not possible to specify log pattern while using Syslog -->
+		</Syslog>
+
+		<!-- Write the logs in console -->
+		<Console name="consoleLogger" target="SYSTEM_OUT">
+			<!-- Specify the format of the logs -->
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %level [%t] [%c] [%M] [%l] - %msg%n" />
+		</Console>
+	</Appenders>
+
+	<Loggers>
+		<Logger name="jsample" level="info" additivity="false">
+			<appender-ref ref="sysLogger" />
+			<appender-ref ref="consoleLogger" />
+		</Logger>
+		<Root level="error" additivity="false">
+			<appender-ref ref="consoleLogger" />
+			<appender-ref ref="sysLogger" />
+		</Root>
+	</Loggers>
+</Configuration>
