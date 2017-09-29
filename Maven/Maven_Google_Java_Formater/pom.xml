@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>jsample</groupId>
-	<artifactId>Maven_Google_Java_Formater</artifactId>
+	<artifactId>Maven_Google_Java_Formatter</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Maven_Google_Java_Formater</name>
+	<name>Maven_Google_Java_Formatter</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -22,6 +22,9 @@
 		<plugins>
 			<!-- Plugin for formatting code using google java format which follows 
 				Google's code style guide -->
+			<!-- Execute plugin using `mvn com.coveo:fmt-maven-plugin:format` command -->
+			<!-- Execute plugin in debug mode using `mvn com.coveo:fmt-maven-plugin:format 
+				-Dverbose=true` command -->
 			<plugin>
 				<groupId>com.coveo</groupId>
 				<artifactId>fmt-maven-plugin</artifactId>
